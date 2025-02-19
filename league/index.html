@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League of Legends</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #061C25;
+            color: #ffffff;
+            background-image: url(image-shows-person-wearing-face-mask-closeup.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .nav-items {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-items a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .nav-items a:hover {
+    border: 2px solid green; /* Combines border properties */
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out; /* Smooth hover effect */
+    padding: 5px 10px; /* Adds spacing for better appearance */
+}
+
+
+        .sign-in-btn {
+            padding: 0.5rem 1.5rem;
+            background-color: #1DA5E8;
+            border: none;
+            border-radius: 20px;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Main Content */
+        .main-content {
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .title {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .description {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .play-now-btn {
+            padding: 1rem 3rem;
+            font-size: 1.5rem;
+            background-color: #1DA5E8;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(29, 165, 232, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .play-now-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(29, 165, 232, 0.7);
+        }
+
+        /* Champion Cards */
+        .champion-cards {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .champion-card {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+            border-radius: 10px;
+            width: 200px;
+        }
+
+        .champion-card img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .champion-name {
+            font-weight: bold;
+            margin-top: 0.5rem;
+        }
+
+        .champion-title {
+            font-size: 0.9rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="League of Legends Icon.svg" alt="League of Legends">
+        </div>
+        <div class="nav-items">
+            <a href="#">Champions</a>
+            <a href="#">News</a>
+            <a href="#">Discover</a>
+            <a href="#">Shop</a>
+        </div>
+        <button class="sign-in-btn">Sign In</button>
+    </nav>
+
+    <main class="main-content">
+        <h1 class="title">LEAGUE of LEGENDS</h1>
+        <p class="description">Join millions of players worldwide in the ultimate battle for victory on the Rift!</p>
+        <button class="play-now-btn">PLAY NOW</button>
+    </main>
+
+    <div class="champion-cards">
+        <div class="champion-card">
+            <img src="lol.jpg" alt="Leona">
+            <div class="champion-name">Leona</div>
+            <div class="champion-title">The Radiant Dawn</div>
+        </div>
+        <div class="champion-card">
+            <img src="lux.jpeg">
+            <div class="champion-name">Lux</div>
+            <div class="champion-title">The Lady of Luminosity</div>
+        </div>
+    </div>
+</body>
+</html>
