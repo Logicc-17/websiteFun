@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motta - Pricing Plans</title>
+    <style>
+        :root {
+            --primary-green: #00ff9d;
+            --dark-bg: #0a0a0a;
+            --card-bg: #1a1a1a;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to bottom, var(--dark-bg), #000000);
+            color: #ffffff;
+            background-image: url(abstract-techno-background-with-connecting-lines.jpg);
+        }
+
+        /* Header Styles */
+        header {
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0,0,0,0.5);
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-green);
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-green);
+        }
+
+        .contact-btn {
+            background: var(--primary-green);
+            color: var(--dark-bg);
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .contact-btn:hover {
+            box-shadow: 0 0 15px var(--primary-green);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 5rem 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #cccccc;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 5%;
+        }
+
+        .price-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .price-card:hover {
+            transform: translateY(-10px);
+            background: linear-gradient(145deg, var(--card-bg), #2a2a2a);
+        }
+
+        .recommended {
+            border: 2px solid var(--primary-green);
+            position: relative;
+        }
+
+        .recommended::before {
+            content: "Recommended";
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-green);
+            color: var(--dark-bg);
+            padding: 0.3rem 1rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            margin: 1rem 0;
+        }
+
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .features li {
+            margin: 1rem 0;
+            color: #cccccc;
+        }
+
+        /* CTA Section */
+        .cta {
+            text-align: center;
+            padding: 5rem 1rem;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .demo-btn {
+            background: var(--primary-green);
+            color: var(--dark-bg);
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .demo-btn:hover {
+            box-shadow: 0 0 20px var(--primary-green);
+            transform: scale(1.05);
+        }
+        .nav-clear {
+    background-color: #646464;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem; /* Add padding to prevent content from sticking to the edges */
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">YMD</div>
+        <nav>
+            <div class="nav-clear">
+                <a href="#">Product</a>
+            <a href="#" style="color: var(--primary-green);">Pricing</a>
+            <a href="#">About</a>
+            </div>
+        </nav>
+        <button class="contact-btn">Contact Us</button>
+    </header>
+
+    <section class="hero">
+        <h1>The Perfect Plan for Your Needs</h1>
+        <p>Choose the perfect plan that suits your business requirements. Scale up or down as needed with our flexible pricing options.</p>
+    </section>
+
+    <section class="pricing">
+        <div class="price-card">
+            <h3>Free Plan</h3>
+            <div class="price">K0<span>/mo</span></div>
+            <ul class="features">
+                <li>Basic Analytics</li>
+                <li>Up to 1,000 Visitors</li>
+                <li>Basic Support</li>
+                <li>1 Project</li>
+            </ul>
+            <button class="contact-btn">Get Started</button>
+        </div>
+
+        <div class="price-card recommended">
+            <h3>Grow Plan</h3>
+            <div class="price">k350,000<span>/mo</span></div>
+            <ul class="features">
+                <li>Advanced Analytics</li>
+                <li>Up to 50,000 Visitors</li>
+                <li>Priority Support</li>
+                <li>10 Projects</li>
+                <li>Custom Integration</li>
+            </ul>
+            <button class="contact-btn">Get Started</button>
+        </div>
+
+        <div class="price-card">
+            <h3>Scale Plan</h3>
+            <div class="price">K750,000<span>/mo</span></div>
+            <ul class="features">
+                <li>Enterprise Analytics</li>
+                <li>Unlimited Visitors</li>
+                <li>24/7 Premium Support</li>
+                <li>Unlimited Projects</li>
+                <li>Custom Integration</li>
+                <li>Dedicated Account Manager</li>
+            </ul>
+            <button class="contact-btn">Get Started</button>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Grab It Fast to Get Special Price</h2>
+        <button class="demo-btn">Book Demo Now!</button>
+    </section>
+</body>
+</html>
