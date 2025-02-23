@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <!-- Load Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6c5ce7;
+            --secondary: #a29bfe;
+            --dark: #2d3436;
+            --light: #dfe6e9;
+            --accent: #c203b2;
+            --white: #ffffff;
+            --black: #000000;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--black);
+            color: var(--dark);
+        }
+
+        .main {
+            display: flex;
+            padding: 16px;
+            gap: 16px;
+        }
+
+        /* Left Navigation */
+        .left {
+            width: 200px;
+            background-color: var(--dark);
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--light);
+            font-weight: 500;
+            padding: 10px 12px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: var(--white);
+            transform: translateX(5px);
+        }
+
+        .nav-menu .material-icons {
+            font-size: 24px;
+        }
+
+        /* Right Content */
+        .right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        /* Hero Top Section */
+        .hero-top {
+            display: flex;
+            gap: 16px;
+        }
+
+        .hero-left {
+            width: 25%;
+            background-color: var(--dark);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            color: var(--white);
+        }
+
+        .hero-left img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--white);
+            margin-bottom: 16px;
+        }
+
+        .hero-left h1 {
+            font-size: 24px;
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+
+        .hero-left .edit-button {
+            background-color: var(--white);
+            color: var(--primary);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero-left .edit-button:hover {
+            background-color: var(--light);
+        }
+
+        .hero-right {
+            flex: 1;
+            background-color: var(--dark);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            color: var(--white);
+        }
+
+        .progress-section {
+            margin-bottom: 20px;
+        }
+
+        .progress-section h2 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 12px;
+            background-color: var(--light);
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+
+        .progress-fill {
+            width: 70%;
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 6px;
+        }
+
+        .achievements h2 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        /* Bottom Section */
+        .bottom {
+            background-color: var(--dark);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            color: var(--white);
+        }
+
+        .recently-played h2 {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+
+        .game-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .game-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .game-item h3 {
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .game-item p {
+            font-size: 14px;
+            color: var(--light);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main {
+                flex-direction: column;
+            }
+
+            .left {
+                width: 100%;
+            }
+
+            .hero-top {
+                flex-direction: column;
+            }
+
+            .hero-left {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <!-- Left Navigation -->
+        <div class="left">
+            <nav class="nav-menu">
+                <a href="#library">
+                    <span class="material-icons">library_books</span>
+                    Library
+                </a>
+                <a href="#store">
+                    <span class="material-icons">store</span>
+                    Store
+                </a>
+                <a href="#community">
+                    <span class="material-icons">groups</span>
+                    Community
+                </a>
+                <a href="#settings">
+                    <span class="material-icons">settings</span>
+                    Settings
+                </a>
+            </nav>
+        </div>
+
+        <!-- Right Content -->
+        <div class="right">
+            <!-- Hero Top Section -->
+            <div class="hero-top">
+                <div class="hero-left">
+                    <img src="ben-sweet-2LowviVHZ-E-unsplash.jpg" alt="Profile Picture">
+                    <h1>KiRa YOsHikAGe</h1>
+                    <button class="edit-button">Edit Profile</button>
+                </div>
+                <div class="hero-right">
+                    <div class="progress-section">
+                        <h2>Level Progress</h2>
+                        <p>10 M / more game hours for level up</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
+                    <div class="achievements">
+                        <h2>Achievements</h2>
+                        <p>43 of 69 achievements unlocked</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div class="bottom">
+                <div class="recently-played">
+                    <h2>Recently Played</h2>
+                    <div class="game-item">
+                        <h3>DURANT AIMS</h3>
+                        <p>2 Lessons completed</p>
+                    </div>
+                    <div class="game-item">
+                        <h3>RED DEAD RECIPE TUN</h3>
+                        <p>3 Lessons completed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
